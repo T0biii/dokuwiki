@@ -435,7 +435,7 @@ class Extension
      */
     public function hasChangedURL()
     {
-        $last = $this->getManager()->getDownloadUrl();
+        $last = $this->getManager()->getDownloadURL();
         if(!$last) return false;
         return $last !== $this->getDownloadURL();
     }
@@ -445,7 +445,7 @@ class Extension
      *
      * @return bool
      */
-    public function updateAvailable()
+    public function isUpdateAvailable()
     {
         if($this->isBundled()) return false; // bundled extensions are never updated
         $self = $this->getInstalledVersion();

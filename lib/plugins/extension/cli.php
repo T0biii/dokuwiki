@@ -126,7 +126,7 @@ class cli_plugin_extension extends CLIPlugin
         $local = new Local();
         $extensions = [];
         foreach ($local->getExtensions() as $ext) {
-            if($ext->updateAvailable()) $extensions[] = $ext->getID();
+            if($ext->isUpdateAvailable()) $extensions[] = $ext->getID();
         }
         return $this->cmdInstall($extensions);
     }
@@ -370,7 +370,7 @@ class cli_plugin_extension extends CLIPlugin
 
                 echo $tr->format(
                     [7, '*'],
-                    ['', '⮎ ' .  sprintf($msg, $ext->getDownloadURL(), $ext->getManager()->getDownloadUrl())],
+                    ['', '⮎ ' .  sprintf($msg, $ext->getDownloadURL(), $ext->getManager()->getDownloadURL())],
                     [null, Colors::C_BLUE]
                 );
             }
