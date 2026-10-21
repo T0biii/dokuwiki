@@ -2,6 +2,9 @@
 # but were removed later. An up to date DokuWiki should not have any of
 # the files installed
 
+# removed on 2026-10-21
+inc/FeedParserFile.php
+
 # removed on 2026-09-29
 lib/tpl/dokuwiki/images/dokuwiki.svg
 
